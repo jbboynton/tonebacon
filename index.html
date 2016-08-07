@@ -1,1 +1,105 @@
-test
+<!--
+HTML main content.
+-->
+
+<!DOCTYPE html>
+<html data-ng-app="tonebacon">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+        maximum-scale=1, user-scalable=no" />
+    <title>ToneBacon | Sounds that sizzle.</title>
+
+    <!-- Library Stylesheets -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css" />
+
+    <!-- Custom stylesheets and favicon file -->
+    <link rel="stylesheet" href="app/app.css" />
+    <link rel="stylesheet" href="app/components/demotool/demotool.css" />
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- Google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Yantramanav'
+        rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Share:700italic"
+        rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!-- Navigation bar -->
+
+    <div class="header">
+      <div class="jumbotron banner"></div>
+
+      <section class="navigation">
+        <nav class="navbar navbar-thin navbar-static-top">
+
+          <!-- Collapse the navbar on narrow displays -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                data-toggle="collapse" data-target="collapsable-navbar"
+                aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <!-- How hard could it possibly be to center this thing
+                vertically? Leave it out for now... -->
+            <!-- <a class="navbar-brand">
+              <i class="fa fa-headphones" aria-hidden="true"></i>
+            </a> -->
+          </div>
+
+          <div class="collapse navbar-collapse" id="collapsable-navbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="#/login">Login</a>
+              </li>
+              <li>
+                <a href="#/demotool">Demo Tool</a>
+              </li>
+            </ul>
+          </div> <!-- /.navbar-collapse -->
+
+        </nav>
+      </section> <!-- /.navigation -->
+    </div> <!-- /.header -->
+
+    <!-- Page wrapper -->
+    <section class="wrapper">
+      <div class="container">
+
+        <!-- Page title -->
+        <h1>
+          <span class="title">ToneBacon</span>
+          <br />
+          <small>Boosting the productivity of garage bands around the globe since TBD.</small>
+        </h1>
+
+        <!-- Views placeholder -->
+        <div data-ng-view></div>
+
+      </div> <!-- /.container -->
+    </section> <!-- /.wrapper -->
+
+    <!-- Browserify bundle -->
+    <script src="dist/bundle.js"></script>
+
+    <!-- UI Scripts -->
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap library -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

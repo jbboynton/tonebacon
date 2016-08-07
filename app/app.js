@@ -11,17 +11,24 @@ var app = angular.module('tonebacon', [
   'ui.bootstrap'
 ]);
 
-//test
-
+require('./components');
 // require('./filters');
 // require('./services');
 // require('./controllers');
 
-// app.config(function($routeProvider) {
-//   $routeProvider
-//     .when('/', {
-//       controller: 'ListController as vm',
-//       templateUrl: 'app/views/list.html'
-//     })
-//     .otherwise({ redirectTo: '/' });
-// });
+app.config(function($routeProvider) {
+  $routeProvider
+    .when('/', {
+      controller: 'HomeCtrl as home',
+      // templateUrl: 'app/views/home.html'
+    })
+    .when('/login', {
+      controller: 'LoginCtrl as login',
+      templateUrl: 'app/components/login/login.html'
+    })
+    .when('/demotool', {
+      controller: 'DemoToolCtrl as demotool',
+      templateUrl: 'app/components/demotool/demotool.html'
+    })
+    .otherwise({ redirectTo: '/' });
+});
